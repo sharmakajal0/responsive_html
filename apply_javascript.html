@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Apply JavaScript</title>
+
+    <!-- javascript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        function createParagraph(text) {
+          let para = document.createElement("p");
+          para.textContent = text;
+          document.body.appendChild(para);
+        }
+
+        let clickCount = 0;
+        // document.querySelector('button').addEventListener(
+        //   'click',
+        //   () => createParagraph(`Button clicked ${++clickCount} time${clickCount > 1? 's': ''}`)
+        // );
+        const buttons = document.querySelectorAll("button");
+
+
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].addEventListener(
+            'click',
+            () => createParagraph(`Button clicked ${++clickCount} time${clickCount > 1? 's': ''}`)
+          );
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="title" onclick="alert('hello');">
+      Hello
+    </h1>
+    <button>Click me</button>
+    <button>Click me</button>
+    <button>Click me</button>
+    <button>Click me</button>
+    <button>Click me</button>
+  </body>
+</html>
