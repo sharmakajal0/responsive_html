@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>Image Gallery</title>
+
+		<!-- import bootstrap -->
+		<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+
+		<!-- import our own stylesheet -->
+		<link rel="stylesheet" type="text/css" href="styles.css"/>	
+
+		<!-- import jQuery -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	</head>
+	<body>
+		<!-- some header info (from Matthew's code) -->
+		<a href="index.html">Home</a>
+		 &nbsp;
+		<a href="aboutme.html">About me</a>
+		&nbsp;
+		<a href="contact.html" class="greenlink">Contact me</a>
+
+		</hr>
+	<div class="container">
+		<h1>Image Gallery</h1>
+
+		<div class="row">
+			<div class="col-md-2">
+				<img class="crop-img" src="img_1.jpg" alt="graffittied building"/> 
+			</div>
+			<div class="col-md-2">
+				<img class="crop-img" src="img_2.jpg" alt="display of cheese"/> 
+			</div>
+			<div class="col-md-2">
+				<img class="crop-img" src="img_3.jpg" alt="synethesizer workshop"/> 
+			</div>
+			<div class="col-md-2">
+				<img class="crop-img" src="img_4.jpg" alt="City night"/> 
+			</div>
+			<div class="col-md-2">
+				<img class="crop-img" src="img_5.jpg" alt="God of Thunder">
+			</div>
+			<div class="col-md-2">
+				<img class="crop-img" src="img_6.jpg" alt="Inuyasha">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<img id="bigImage" 
+				  class="large-img" 
+				  src="img_1.jpg" 
+				  alt="graffittied building"/> 
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(".crop-img").click(function(){
+			$("#bigImage").attr('src', 
+				$(this).attr('src'));
+		});
+	</script>
+
+	</body>
+</html>
