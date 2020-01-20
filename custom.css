@@ -5,3 +5,7 @@
 .indent {
     margin-left: 10px;
 }
+
+.background-image {
+    background-image: url("week_3_code/img_5.jpg");
+}
